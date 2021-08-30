@@ -10,7 +10,7 @@
 
 ---
 
-## 各種アカウント
+## 各種アカウント(zennは非公開のメモ用なので記事はありません）
 <p>
 <a href="https://github.com/yosuke0517" target="_blank"><img alt="Github" src="https://img.shields.io/badge/yosuke0517-%2312100E.svg?&style=flat-square&logo=Github&logoColor=white" /></a>
 <a href="https://twitter.com/yosuke_takeuchi" target="_blank"><img alt="Twitter" src="https://img.shields.io/badge/@yosuke_takeuchi-%231DA1F2.svg?&style=flat-square&logo=twitter&logoColor=white" /></a>
@@ -192,7 +192,7 @@
 | 予算管理アプリケーション（新規開発）|     Django      | 補助的な開発・軽微な調査のみ|
 |              |       Python      | -     | |
 |              |       MySQL      | ユーザ情報その他の永続化に使用     | |
-|              |       Nuxt.js(Vue.js)       ＿    | 全画面作成|
+|              |       Nuxt.js(Vue.js)         | 全画面作成|
 |              |       TypeScript           | |
 
 ### 実績・取り組み
