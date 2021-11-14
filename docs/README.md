@@ -46,9 +46,9 @@
 | 言語名      | スキルレベル   | 経験年数| 備考                                                                                    |
 |------------|--------------|--------------|-----------------------------------------------------------------------------------------|
 | HTML       |       A      |       4Y     | 直近はフロントエンドがメインなので普通に書けます。                              |
-| CSS（ほぼ SCSS）        |       A      |       4Y      | 設計（命名）は BEM がほとんど、Tailwind CSS はプライベートのみ                               |
+| CSS（ほぼ SCSS）        |       A      |       4Y      | 設計（命名）は BEM がほとんど、Tailwind CSS はプライベートのみ  [css 比較](https://fuzzy-hunter-3bf.notion.site/d00216c0cf184d78bc24dfe5ffb91c78?v=2f657483ca4746ac8411f7f2be182dca)                             |
 | JavaScript |       A      |       4Y      | フロント、Node.js で使用。                               |
-| TypeScript |       A      |       2.8Y      | フロントで使用。Mapped Types, Conditional Types 等も適切に使用（バックエンドは個人でのみ）                               |
+| TypeScript |       A      |       2.8Y      | フロントで使用。Mapped Types, Conditional Types 等も適切に使用（バックエンドは軽改修、調査など経験薄）                               |
 | Java       |       B      |       1Y      | 保守/開発案件で Java 8 + Spring Framework の組み合わせで少し開発した程度。                        |
 | Ruby       |       B      |       0.5Y    | Ruby 2.5 の頃に利用していました、最近は利用していません。                              |
 | Python     |       B      |       1Y    | スクレイピングで使用したことがあります。Web API（REST）も開発経験有りです。          |
@@ -143,7 +143,7 @@
 | 案件名            | 使用技術 | 備考 |
 |-----------------------|--------------|--------------------------|
 | タスク管理ツール新規開発|     Node.js      | websocket による API 開発|
-|              |       mongodb      | タスク情報などの永続化     | |
+|              |       mongodb      | タスク情報などの永続化     |
 
 ### 実績・取り組み
 - websocket を用いた API を実装
