@@ -49,7 +49,7 @@
 | 言語名      | スキルレベル   | 経験年数| 備考                                                                                    |
 |------------|--------------|--------------|-----------------------------------------------------------------------------------------|
 | HTML       |       A      |       4Y     | 直近はフロントエンドがメインなので普通に書けます。                              |
-| CSS（ほぼ SCSS）        |       A      |       4Y      | 設計（命名）は BEM がほとんど（Flocss もたまに）、Tailwind CSS はプライベートのみ  [css 比較](https://fuzzy-hunter-3bf.notion.site/d00216c0cf184d78bc24dfe5ffb91c78?v=2f657483ca4746ac8411f7f2be182dca)                             |
+| CSS（ほぼ SCSS）        |       A      |       4Y      | 設計（命名）は BEM, Flocss がほとんど、Tailwind CSS はプライベートのみ  [css 比較](https://fuzzy-hunter-3bf.notion.site/d00216c0cf184d78bc24dfe5ffb91c78?v=2f657483ca4746ac8411f7f2be182dca)                             |
 | JavaScript |       A      |       4Y      | フロント、Node.js で使用。                               |
 | TypeScript |       A      |       2.8Y      | フロントで使用。Mapped Types, Conditional Types 等も適切に使用（バックエンドは軽改修、調査など経験薄）                               |
 | Java       |       B      |       1Y      | 保守/開発案件で Java 8 + Spring Framework の組み合わせで少し開発した程度。                        |
