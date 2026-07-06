@@ -53,7 +53,7 @@ const App = () => {
       <section className="summary-band" aria-labelledby="summary-title">
         <div>
           <Sparkles aria-hidden="true" />
-          <h2 id="summary-title">採用担当が最初に見るべき要点</h2>
+          <h2 id="summary-title">LLMによる要点整理</h2>
         </div>
         <ul>
           {resume.highlights.map((highlight) => (
