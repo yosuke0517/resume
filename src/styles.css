@@ -1,0 +1,486 @@
+:root {
+  color-scheme: light;
+  --paper: #fbfaf7;
+  --ink: #202124;
+  --muted: #6a6f76;
+  --line: #d8d2c7;
+  --panel: #ffffff;
+  --accent: #1d6f78;
+  --accent-dark: #12484f;
+  --mark: #d96c3f;
+  --soft: #e9f3f1;
+  --code: #f4e5d5;
+  font-family: "Inter", "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #e8e4dc;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background:
+    linear-gradient(90deg, rgba(29, 111, 120, 0.08) 1px, transparent 1px),
+    var(--paper);
+  background-size: 64px 64px;
+  line-height: 1.75;
+}
+
+a {
+  color: inherit;
+}
+
+.resume-shell {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 48px 0 80px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: 32px;
+  align-items: stretch;
+  border-bottom: 2px solid var(--ink);
+  padding-bottom: 32px;
+}
+
+.eyebrow,
+.section-heading p,
+.hero__panel p {
+  margin: 0;
+  color: var(--accent-dark);
+  font-family: "Roboto Mono", "SFMono-Regular", Consolas, monospace;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 16px;
+  font-size: clamp(2.4rem, 6vw, 5.3rem);
+  line-height: 0.98;
+}
+
+h1 span {
+  display: block;
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: clamp(1rem, 2vw, 1.45rem);
+  font-weight: 700;
+}
+
+.hero__title {
+  max-width: 740px;
+  margin-bottom: 28px;
+  font-size: clamp(1.08rem, 2vw, 1.5rem);
+  font-weight: 700;
+  line-height: 1.65;
+}
+
+.meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.meta-row span,
+.meta-row a,
+.download-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 36px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.72);
+  padding: 5px 12px;
+  text-decoration: none;
+}
+
+.hero__panel {
+  border: 2px solid var(--ink);
+  background: var(--soft);
+  padding: 20px;
+}
+
+.hero__panel ul,
+.summary-band ul,
+.skill-group ul,
+.achievement-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hero__panel li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  border-bottom: 1px solid rgba(18, 72, 79, 0.22);
+  padding: 10px 0;
+}
+
+.hero__panel li:last-child {
+  border-bottom: 0;
+}
+
+.hero__panel b {
+  color: var(--accent-dark);
+}
+
+.summary-band {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 24px;
+  margin: 32px 0;
+  border: 2px solid var(--accent-dark);
+  background: var(--panel);
+  padding: 24px;
+}
+
+.summary-band div {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.summary-band svg {
+  color: var(--mark);
+  flex: 0 0 auto;
+  margin-top: 4px;
+}
+
+.summary-band h2,
+.section-heading h2 {
+  margin-bottom: 0;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  line-height: 1.3;
+}
+
+.summary-band li {
+  position: relative;
+  padding-left: 18px;
+}
+
+.summary-band li::before,
+.achievement-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.72em;
+  width: 7px;
+  height: 7px;
+  background: var(--mark);
+}
+
+.section {
+  margin-top: 56px;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: end;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 22px;
+  padding-bottom: 12px;
+}
+
+.strength-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.strength-card,
+.skill-group,
+.experience-card__body,
+.final-section {
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.strength-card {
+  border-top: 4px solid var(--accent);
+  padding: 18px;
+}
+
+.strength-card h3,
+.skill-group h3,
+.experience-card h3 {
+  margin-bottom: 8px;
+  line-height: 1.45;
+}
+
+.strength-card p,
+.experience-card__summary,
+.final-section p,
+.scale-note {
+  color: var(--muted);
+}
+
+.skill-matrix {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.skill-group {
+  border-left: 5px solid var(--accent);
+  padding: 18px;
+}
+
+.skill-group li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 16px;
+  border-top: 1px solid var(--line);
+  padding: 12px 0;
+}
+
+.skill-group strong,
+.skill-group span,
+.skill-group em {
+  display: block;
+}
+
+.skill-group span {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.skill-group em {
+  color: var(--accent-dark);
+  font-style: normal;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.scale-note {
+  margin: 14px 0 0;
+  font-size: 0.9rem;
+}
+
+.timeline {
+  display: grid;
+  gap: 18px;
+}
+
+.experience-card {
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
+  gap: 16px;
+}
+
+.experience-card__index {
+  color: var(--accent-dark);
+  font-family: "Roboto Mono", "SFMono-Regular", Consolas, monospace;
+  font-weight: 800;
+  padding-top: 18px;
+}
+
+.experience-card__body {
+  border-left: 5px solid var(--ink);
+  padding: 18px;
+}
+
+.experience-card__header {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.experience-card__header p {
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.experience-card time {
+  flex: 0 0 auto;
+  color: var(--accent-dark);
+  font-weight: 800;
+}
+
+.achievement-list li {
+  position: relative;
+  margin-top: 8px;
+  padding-left: 18px;
+}
+
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.tag-row span {
+  background: var(--code);
+  color: #5a3322;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 3px 8px;
+}
+
+.final-section {
+  border: 1px solid var(--line);
+  padding: 24px;
+}
+
+@media (max-width: 860px) {
+  .hero,
+  .summary-band,
+  .strength-grid,
+  .skill-matrix,
+  .experience-card {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-card__index {
+    padding-top: 0;
+  }
+
+  .section-heading,
+  .experience-card__header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 12mm;
+  }
+
+  html,
+  body {
+    background: #ffffff;
+  }
+
+  .resume-shell {
+    width: 100%;
+    padding: 0;
+  }
+
+  .hero {
+    grid-template-columns: minmax(0, 1fr) 250px;
+    gap: 18px;
+    padding-bottom: 18px;
+  }
+
+  h1 {
+    margin-bottom: 8px;
+    font-size: 42pt;
+  }
+
+  h1 span {
+    margin-top: 4px;
+    font-size: 14pt;
+  }
+
+  .hero__title {
+    margin-bottom: 12px;
+    font-size: 14pt;
+    line-height: 1.5;
+  }
+
+  .meta-row span,
+  .meta-row a {
+    min-height: 28px;
+    padding: 2px 8px;
+  }
+
+  .hero__panel {
+    padding: 12px;
+  }
+
+  .hero__panel li {
+    padding: 4px 0;
+  }
+
+  .summary-band {
+    grid-template-columns: 210px minmax(0, 1fr);
+    gap: 16px;
+    margin: 18px 0 0;
+    padding: 16px;
+  }
+
+  .summary-band h2,
+  .section-heading h2 {
+    font-size: 18pt;
+  }
+
+  .summary-band li,
+  .strength-card p,
+  .skill-group li,
+  .experience-card__body,
+  .final-section {
+    font-size: 10pt;
+    line-height: 1.55;
+  }
+
+  .section {
+    margin-top: 28px;
+  }
+
+  .section-heading {
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+  }
+
+  .strength-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .skill-matrix {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .skill-group {
+    padding: 12px;
+  }
+
+  .skill-group li {
+    padding: 6px 0;
+  }
+
+  .experience-card {
+    grid-template-columns: 58px minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .experience-card__body {
+    padding: 12px;
+  }
+
+  .hero,
+  .section,
+  .summary-band {
+    break-inside: avoid;
+  }
+
+  .experience-card,
+  .skill-group,
+  .strength-card {
+    break-inside: avoid;
+  }
+
+  .download-link {
+    display: none;
+  }
+}
