@@ -26,6 +26,7 @@ describe("resume data helpers", () => {
     const inventoryProject = resume.experiences.find((experience) => experience.no === "13");
 
     expect(inventoryProject?.achievements.join(" ")).toContain("純粋なDDD");
-    expect(inventoryProject?.achievements.join(" ")).toContain("学習コスト");
+    expect(inventoryProject?.achievements.join(" ")).toContain("業務ルールはUseCaseに集約");
+    expect(inventoryProject?.achievements.join(" ")).toContain("チーム学習コスト");
   });
 });
