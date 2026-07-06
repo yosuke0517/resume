@@ -89,7 +89,9 @@ export const resume = {
       role: "BE/FE開発メンバー",
       summary: "美容機器製造業向けの在庫・倉庫管理システム。要求、発注、納品、取引先、倉庫情報を扱う業務Webアプリケーション。",
       achievements: [
-        "DDD-lite + Clean Architectureを採用し、UseCase / Repositoryの層分離でビジネスロジックとデータアクセスを分離。",
+        "DDD-lite + Clean Architectureを採用。純粋なDDDをそのまま導入すると抽象化レイヤーと学習コストが大きく、小規模チームでは開発速度を落とすため、実用的なエッセンスに絞った。",
+        "UseCase / Repositoryの層分離でビジネスロジックとデータアクセスを分離。業務用語を型・テーブル名・変数名に反映し、biz側との認識齟齬を減らした。",
+        "Repositoryインターフェース、リッチなAggregate Root、Value Objectのクラス化、Domain Eventsは現時点の複雑度では過剰と判断し、必要になった段階で拡張できる形に留めた。",
         "AppContext / TxAppContextによるDIとトランザクション境界を設計。",
         "Next.js 15-16 App Router、Server Components、Server Actions、Conform、Zodで画面とフォームを実装。",
         "Hono.js + Drizzle ORM + neverthrowで型安全なAPIと関数型エラーハンドリングを導入。",

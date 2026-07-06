@@ -21,4 +21,11 @@ describe("resume data helpers", () => {
     expect(featured.title).toBe("HR管理Webアプリ開発支援");
     expect(featured.period).toBe("2026/1〜");
   });
+
+  it("explains why DDD-lite was selected", () => {
+    const inventoryProject = resume.experiences.find((experience) => experience.no === "13");
+
+    expect(inventoryProject?.achievements.join(" ")).toContain("純粋なDDD");
+    expect(inventoryProject?.achievements.join(" ")).toContain("学習コスト");
+  });
 });
