@@ -29,7 +29,7 @@ export const resume = {
     title: "TypeScript / React / Next.js を軸に、FE/BE一貫開発と開発体験改善を進めるWebエンジニア"
   },
   highlights: [
-    "直近案件ではFEリードとして、LLM向けドキュメント整備とテスティングトロフィーを意識したカバレッジ拡充を推進。",
+    "直近案件ではFEリードとして、作業者に依存しないコード品質を担保するための規約・自動化整備と、テスティングトロフィーを意識したカバレッジ拡充を推進。",
     "直近はモノレポ構成でFE/BE一貫開発。DB設計、バックエンド開発、フロントエンド実装まで担当。",
     "TypeScript、React / Next.js、Vue / Nuxt.js を用いたSPA・業務Webアプリ開発が主領域。",
     "UI/UX仮説、プロトタイプ、ABテストを通じた改善と、パフォーマンス課題の解決を得意とする。",
@@ -81,7 +81,7 @@ export const resume = {
       summary: "採用関連システムのリニューアルにおいて、フロントエンド設計・開発基盤整備・バックエンド実装を支援。",
       achievements: [
         "FEリード的な立場で、Next.js / Turborepo構成の設計、共通UI、APIクライアント、認証、テスト基盤の整備を推進。",
-        "docs/LLM配下に、プロジェクト構成、React / Next.js規約、フォーム、データ取得、UIコンポーネント、命名、テスト方針などを整理。LLMやAIレビューが参照すべき前提を明文化し、生成コードの揺れや誤指摘を減らす仕組みを整えた。",
+        "プロジェクト構成、React / Next.js規約、フォーム、データ取得、UIコンポーネント、命名、テスト方針などを明文化。作業者やLLM利用有無に依存せず、ソースコード品質と実装方針の揺れを抑えるための規約・レビュー観点・参照ドキュメントを整備した。",
         "テスティングトロフィーを意識し、Vitest / Testing Library / Storybook / MSWを用いた結合テストを中心に、UI、hooks、utils、APIクライアント周辺のカバレッジを拡充。",
         "Go製バックエンドではDDD + Clean Architectureを採用し、domain / application / adapter / infrastructureの責務分離、CQRS、Repositoryインターフェース、DIを実装。コード量は増える一方で、依存方向と責務境界が明確になり、ユースケース単位のテストや変更時の影響範囲の把握がしやすくなった。"
       ],
