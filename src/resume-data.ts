@@ -29,6 +29,7 @@ export const resume = {
     title: "TypeScript / React / Next.js を軸に、FE/BE一貫開発と開発体験改善を進めるWebエンジニア"
   },
   highlights: [
+    "直近案件ではFEリードとして、LLM向けドキュメント整備とテスティングトロフィーを意識したカバレッジ拡充を推進。",
     "直近はモノレポ構成でFE/BE一貫開発。DB設計、バックエンド開発、フロントエンド実装まで担当。",
     "TypeScript、React / Next.js、Vue / Nuxt.js を用いたSPA・業務Webアプリ開発が主領域。",
     "UI/UX仮説、プロトタイプ、ABテストを通じた改善と、パフォーマンス課題の解決を得意とする。",
@@ -54,32 +55,37 @@ export const resume = {
     }
   ],
   skills: [
-    { name: "TypeScript", level: "A", years: "5年", category: "language", note: "現在業務で最も使用。フロントエンド/BFFで利用。Mapped/Conditional Typesも使用可。", current: true, priority: 1 },
-    { name: "Next.js", level: "A", years: "3年", category: "frontend", note: "App Router、Server Components、Server Actions、oRPCを使ったフルスタック開発経験。", current: true, priority: 2 },
-    { name: "React", level: "A", years: "3年", category: "frontend", note: "グロース開発、Redux、Hooksの利用経験。", current: true, priority: 3 },
-    { name: "Go", level: "B", years: "1年", category: "language", note: "直近案件でAPI設計・実装、GraphQL、goroutineを活用。", current: true, priority: 4 },
-    { name: "Docker", level: "A", years: "2年", category: "devops", note: "開発環境構築で日常的に使用。", current: true, priority: 5 },
-    { name: "JavaScript", level: "A", years: "5年", category: "language", note: "フロントエンド、Node.jsでのバックエンド開発で使用。", priority: 10 },
-    { name: "HTML/CSS(SCSS)", level: "A", years: "5年", category: "frontend", note: "BEM、FLOCSSでの設計経験。Tailwind CSSも利用。", priority: 11 },
-    { name: "Nuxt.js", level: "A", years: "4年", category: "frontend", note: "Nuxt 2/3、Vuex、Pinia。複数の新規・グロース案件で経験。", priority: 12 },
-    { name: "Vue.js", level: "A", years: "4年", category: "frontend", note: "最も経験豊富なフレームワークの一つ。", priority: 13 },
-    { name: "Hono.js", level: "B", years: "1年", category: "backend", note: "型安全なAPIルーティングとミドルウェア設計。", current: true, priority: 14 },
-    { name: "Express", level: "B", years: "1年", category: "backend", note: "Node.jsでのAPI開発、WebSocket実装経験。", priority: 15 },
-    { name: "Ruby on Rails", level: "B", years: "1年", category: "backend", note: "API開発、Cognito認証フロー実装で利用。", priority: 16 },
-    { name: "MySQL", level: "B", years: "2年", category: "database", note: "インデックス設定やクエリ改善の経験。", current: true, priority: 17 },
-    { name: "Firestore", level: "B", years: "1年", category: "database", note: "NoSQL設計、リアルタイム更新機能で利用。", priority: 18 },
-    { name: "AWS", level: "B", years: "1年", category: "cloud", note: "Cognito、ALB、S3、CloudFront、Lambda、Route 53、SESの利用経験。", current: true, priority: 19 },
-    { name: "GitHub Actions", level: "C", years: "1年", category: "devops", note: "CI/CD、Slack通知などの基本設定。", current: true, priority: 20 }
+    { name: "TypeScript", level: "A", years: "6年", category: "language", note: "現在業務で最も使用。フロントエンド/BFFで利用。Mapped/Conditional Typesも使用可。", current: true, priority: 1 },
+    { name: "Next.js", level: "A", years: "4年", category: "frontend", note: "App Router、Server Components、Server Actions、oRPCを使ったフルスタック開発経験。", current: true, priority: 2 },
+    { name: "React", level: "A", years: "4年", category: "frontend", note: "グロース開発、Redux、Hooksの利用経験。", current: true, priority: 3 },
+    { name: "Go", level: "B", years: "2年", category: "language", note: "直近案件でAPI設計・実装、GraphQL、goroutineを活用。", current: true, priority: 4 },
+    { name: "Docker", level: "A", years: "3年", category: "devops", note: "開発環境構築で日常的に使用。", current: true, priority: 5 },
+    { name: "JavaScript", level: "A", years: "6年", category: "language", note: "フロントエンド、Node.jsでのバックエンド開発で使用。", priority: 10 },
+    { name: "HTML/CSS(SCSS)", level: "A", years: "6年", category: "frontend", note: "BEM、FLOCSSでの設計経験。Tailwind CSSも利用。", priority: 11 },
+    { name: "Nuxt.js", level: "A", years: "5年", category: "frontend", note: "Nuxt 2/3、Vuex、Pinia。複数の新規・グロース案件で経験。", priority: 12 },
+    { name: "Vue.js", level: "A", years: "5年", category: "frontend", note: "最も経験豊富なフレームワークの一つ。", priority: 13 },
+    { name: "Hono.js", level: "B", years: "2年", category: "backend", note: "型安全なAPIルーティングとミドルウェア設計。", current: true, priority: 14 },
+    { name: "Express", level: "B", years: "2年", category: "backend", note: "Node.jsでのAPI開発、WebSocket実装経験。", priority: 15 },
+    { name: "Ruby on Rails", level: "B", years: "2年", category: "backend", note: "API開発、Cognito認証フロー実装で利用。", priority: 16 },
+    { name: "MySQL", level: "B", years: "3年", category: "database", note: "インデックス設定やクエリ改善の経験。", current: true, priority: 17 },
+    { name: "Firestore", level: "B", years: "2年", category: "database", note: "NoSQL設計、リアルタイム更新機能で利用。", priority: 18 },
+    { name: "AWS", level: "B", years: "2年", category: "cloud", note: "Cognito、ALB、S3、CloudFront、Lambda、Route 53、SESの利用経験。", current: true, priority: 19 },
+    { name: "GitHub Actions", level: "B", years: "2年", category: "devops", note: "CI/CD、GitHub Pagesデプロイ、Slack通知などの運用経験。", current: true, priority: 20 }
   ] satisfies Skill[],
   experiences: [
     {
       no: "14",
       title: "HR管理Webアプリ開発支援",
       period: "2026/1〜",
-      role: "BE/FE開発メンバー",
-      summary: "採用関連システムのリニューアルにおける要件定義から実装までを支援。",
-      achievements: ["参画直後のため、技術選定・アーキテクチャ設計業務が中心。"],
-      technologies: ["Next.js", "TypeScript", "React"],
+      role: "FEリード・BE/FE開発メンバー",
+      summary: "採用関連システムのリニューアルにおいて、フロントエンド設計・開発基盤整備・バックエンド実装を支援。",
+      achievements: [
+        "FEリード的な立場で、Next.js / Turborepo構成の設計、共通UI、APIクライアント、認証、テスト基盤の整備を推進。",
+        "docs/LLM配下に、プロジェクト構成、React / Next.js規約、フォーム、データ取得、UIコンポーネント、命名、テスト方針などを整理。LLMやAIレビューが参照すべき前提を明文化し、生成コードの揺れや誤指摘を減らす仕組みを整えた。",
+        "テスティングトロフィーを意識し、Vitest / Testing Library / Storybook / MSWを用いた結合テストを中心に、UI、hooks、utils、APIクライアント周辺のカバレッジを拡充。",
+        "Go製バックエンドではDDD + Clean Architectureを採用し、domain / application / adapter / infrastructureの責務分離、CQRS、Repositoryインターフェース、DIを実装。コード量は増える一方で、依存方向と責務境界が明確になり、ユースケース単位のテストや変更時の影響範囲の把握がしやすくなった。"
+      ],
+      technologies: ["Next.js", "React", "TypeScript", "Go", "Turborepo", "Vitest", "Testing Library", "Storybook", "MSW", "GitHub Actions"],
       featured: true
     },
     {
