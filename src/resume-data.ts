@@ -55,7 +55,7 @@ export const resume = {
     }
   ],
   skills: [
-    { name: "TypeScript", level: "A", years: "6年", category: "language", note: "現在業務で最も使用。フロントエンド/BFFで利用。Mapped/Conditional Typesも使用可。", current: true, priority: 1 },
+    { name: "TypeScript", level: "A", years: "6年", category: "language", note: "現在業務で最も使用。strictな型設定、型推論を活かしたAPI/フォーム/スキーマ設計、ランタイムバリデーションとの接続が可能。", current: true, priority: 1 },
     { name: "Next.js", level: "A", years: "4年", category: "frontend", note: "App Router、Server Components、Server Actions、oRPCを使ったフルスタック開発経験。", current: true, priority: 2 },
     { name: "React", level: "A", years: "4年", category: "frontend", note: "グロース開発、Redux、Hooksの利用経験。", current: true, priority: 3 },
     { name: "Go", level: "B", years: "2年", category: "language", note: "直近案件でAPI設計・実装、GraphQL、goroutineを活用。", current: true, priority: 4 },
