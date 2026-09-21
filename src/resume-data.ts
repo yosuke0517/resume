@@ -14,10 +14,17 @@ export type Experience = {
   period: string;
   role: string;
   summary: string;
-  achievements: string[];
+  achievements: Achievement[];
   technologies: string[];
   featured?: boolean;
 };
+
+export type Achievement =
+  | string
+  | {
+      summary: string;
+      details: string[];
+    };
 
 export const resume = {
   updatedAt: "2026-07",
@@ -80,10 +87,39 @@ export const resume = {
       role: "FEリード・BE/FE開発メンバー",
       summary: "採用関連システムのリニューアルにおいて、フロントエンド設計・開発基盤整備・バックエンド実装を支援。",
       achievements: [
-        "FEリード的な立場で、Next.js / Turborepo構成の設計、共通UI、APIクライアント、認証、テスト基盤の整備を推進。",
-        "プロジェクト構成、React / Next.js規約、フォーム、データ取得、UIコンポーネント、命名、テスト方針などを明文化。作業者やLLM利用有無に依存せず、ソースコード品質と実装方針の揺れを抑えるための規約・レビュー観点・参照ドキュメントを整備した。",
-        "テスティングトロフィーを意識し、Vitest / Testing Library / Storybook / MSWを用いた結合テストを中心に、UI、hooks、utils、APIクライアント周辺のカバレッジを拡充。",
-        "Go製バックエンドではDDD + Clean Architectureを採用し、domain / application / adapter / infrastructureの責務分離、CQRS、Repositoryインターフェース、DIを実装。コード量は増える一方で、依存方向と責務境界が明確になり、ユースケース単位のテストや変更時の影響範囲の把握がしやすくなった。"
+        {
+          summary: "FEリードとして、Next.js / Turborepoによるモノレポ構成と、共通UI、APIクライアント、認証、テスト基盤などの横断領域を設計・整備。",
+          details: [
+            "複数アプリで利用するUI、型定義、APIクライアント、認証処理を共通パッケージとして分離し、変更箇所と責務を明確化。",
+            "Testing Libraryのユーティリティ、jest-dom、MSWのライフサイクル、Vitestのカバレッジ設定を共通パッケージへ集約し、アプリごとのテスト環境差異を抑制。",
+            "未提供APIをMSWで段階的に代替できる仕組みを用意し、バックエンドのリリースを待たずにフロントエンド開発を進められる構成を整備。"
+          ]
+        },
+        {
+          summary: "作業者や利用するLLMに依存しないコード品質を目指し、実装規約・レビュー観点・エージェント実行手順を体系化。",
+          details: [
+            "プロジェクト構成、React / Next.js、フォーム、データ取得、UIコンポーネント、命名、TypeScript、テストなどの判断基準を文書化。",
+            "編集対象に応じた規約を読み込める構成とし、Claude CodeとCodexの双方へ同じ方針が伝わるよう同期・整合性チェックを自動化。",
+            "レビュー対応を検知するhookと学習スキルを整備し、再発性のある指摘を抽出して、人の承認後に規約・スキル・hookへ還元する継続改善フローを構築。",
+            "PR差分を役割別に並列レビューし、重複排除や横断的な不整合確認を行うAIレビューをCIへ組み込み。"
+          ]
+        },
+        {
+          summary: "テスティングトロフィーを意識し、ユーザー操作に近い結合テストを中心としたテスト戦略とカバレッジ改善を推進。",
+          details: [
+            "Vitest / Testing Library / Storybook / MSWを組み合わせ、フォーム入力、バリデーション、API通信、結果表示までを一連の振る舞いとして検証。",
+            "Storybookのストーリーをテストでも再利用し、表示状態の定義と自動テストの二重管理を抑制。",
+            "PRごとに変更対象プロジェクトのカバレッジを計測し、ベースブランチとの差分とプロジェクト別サマリを確認できるCIを整備。",
+            "pre-commitで静的解析、pre-pushで重複コードと未使用コードを検出し、レビュー前に機械的な品質問題を除去。"
+          ]
+        },
+        {
+          summary: "Go製バックエンドではDDD + Clean Architectureを採用し、依存方向と責務境界が明確な構成を実装。",
+          details: [
+            "domain / application / adapter / infrastructureへ責務を分離し、CQRS、Repositoryインターフェース、DIを導入。",
+            "コード量とのトレードオフはあるものの、ドメインロジックを外部I/Oから分離することで、ユースケース単位のテストと変更影響範囲の把握を容易にした。"
+          ]
+        }
       ],
       technologies: ["Next.js", "React", "TypeScript", "Go", "Turborepo", "Vitest", "Testing Library", "Storybook", "MSW", "GitHub Actions"],
       featured: true

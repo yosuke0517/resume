@@ -1,5 +1,5 @@
 import { createRoot } from "react-dom/client";
-import { Code2, Download, MapPin, Sparkles } from "lucide-react";
+import { ChevronDown, Code2, Download, MapPin, Sparkles } from "lucide-react";
 import { resume } from "./resume-data";
 import { getCurrentSkills } from "./lib/resume";
 import "./styles.css";
@@ -126,9 +126,27 @@ const App = () => {
                 </div>
                 <p className="experience-card__summary">{experience.summary}</p>
                 <ul className="achievement-list">
-                  {experience.achievements.map((achievement) => (
-                    <li key={achievement}>{achievement}</li>
-                  ))}
+                  {experience.achievements.map((achievement) => {
+                    if (typeof achievement === "string") {
+                      return <li key={achievement}>{achievement}</li>;
+                    }
+
+                    return (
+                      <li key={achievement.summary}>
+                        <details className="achievement-details">
+                          <summary>
+                            <span>{achievement.summary}</span>
+                            <ChevronDown size={18} aria-hidden="true" />
+                          </summary>
+                          <ul className="achievement-details__list">
+                            {achievement.details.map((detail) => (
+                              <li key={detail}>{detail}</li>
+                            ))}
+                          </ul>
+                        </details>
+                      </li>
+                    );
+                  })}
                 </ul>
                 <div className="tag-row">
                   {experience.technologies.map((technology) => (
