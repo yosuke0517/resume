@@ -67,4 +67,31 @@ describe("resume data helpers", () => {
       ])
     );
   });
+
+  it("preserves education and employment history before the project list", () => {
+    expect(resume.education).toEqual([
+      {
+        period: "2012/04〜2017/03",
+        organization: "サイバー大学 IT総合学部",
+        description: "卒業"
+      }
+    ]);
+    expect(resume.employmentHistory).toEqual([
+      expect.objectContaining({
+        period: "2009/04〜2017/04",
+        organization: "株式会社豊田自動織機",
+        description: expect.stringContaining("品質管理")
+      }),
+      expect.objectContaining({
+        period: "2017/12〜2018/12",
+        organization: "株式会社日本オーエー研究所",
+        description: expect.stringContaining("東京メトロ管制管理システム")
+      }),
+      expect.objectContaining({
+        period: "2019/01〜2021/03",
+        organization: "株式会社ROSSO",
+        description: expect.stringContaining("電通デジタル社内")
+      })
+    ]);
+  });
 });

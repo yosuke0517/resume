@@ -15,4 +15,16 @@ describe("resume achievements", () => {
     expect(disclosures).toHaveLength(4);
     expect([...disclosures].every((details) => !details.hasAttribute("open"))).toBe(true);
   });
+
+  it("renders education and employment history before the project timeline", async () => {
+    const backgroundHeading = await screen.findByRole("heading", { name: "学歴・所属企業" });
+    const firstProject = screen.getByText("No. 14");
+
+    expect(screen.getByText("サイバー大学 IT総合学部")).toBeInTheDocument();
+    expect(screen.getByText("株式会社豊田自動織機")).toBeInTheDocument();
+    expect(screen.getByText("株式会社日本オーエー研究所")).toBeInTheDocument();
+    expect(screen.getByText("株式会社ROSSO")).toBeInTheDocument();
+    expect(screen.getByText(/東京メトロ管制管理システム/)).toBeInTheDocument();
+    expect(backgroundHeading.compareDocumentPosition(firstProject) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+  });
 });

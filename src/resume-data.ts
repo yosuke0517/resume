@@ -26,6 +26,12 @@ export type Achievement =
       details: string[];
     };
 
+export type CareerEntry = {
+  period: string;
+  organization: string;
+  description: string;
+};
+
 export const resume = {
   updatedAt: "2026-07",
   person: {
@@ -79,6 +85,30 @@ export const resume = {
     { name: "AWS", level: "B", years: "2年", category: "cloud", note: "Cognito、ALB、S3、CloudFront、Lambda、Route 53、SESの利用経験。", current: true, priority: 19 },
     { name: "GitHub Actions", level: "B", years: "2年", category: "devops", note: "CI/CD、GitHub Pagesデプロイ、Slack通知などの運用経験。", current: true, priority: 20 }
   ] satisfies Skill[],
+  education: [
+    {
+      period: "2012/04〜2017/03",
+      organization: "サイバー大学 IT総合学部",
+      description: "卒業"
+    }
+  ] satisfies CareerEntry[],
+  employmentHistory: [
+    {
+      period: "2009/04〜2017/04",
+      organization: "株式会社豊田自動織機",
+      description: "機械加工部門で品質管理業務に従事（非IT職）。"
+    },
+    {
+      period: "2017/12〜2018/12",
+      organization: "株式会社日本オーエー研究所",
+      description: "SESとして、東京メトロ管制管理システムやパスポート管理システムのWeb開発・保守に従事。"
+    },
+    {
+      period: "2019/01〜2021/03",
+      organization: "株式会社ROSSO",
+      description: "SESとして、電通デジタル社内の予算・財務管理Webシステムを中心に開発・保守に従事。"
+    }
+  ] satisfies CareerEntry[],
   experiences: [
     {
       no: "14",

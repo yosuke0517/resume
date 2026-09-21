@@ -112,6 +112,40 @@ const App = () => {
           <p>Experience</p>
           <h2 id="experience-title">職務経歴</h2>
         </div>
+        <section className="career-history" aria-labelledby="career-history-title">
+          <h3 id="career-history-title">学歴・所属企業</h3>
+          <div className="career-history__grid">
+            <div className="career-history__group">
+              <h4>学歴</h4>
+              <ul>
+                {resume.education.map((entry) => (
+                  <li key={entry.organization}>
+                    <time>{entry.period}</time>
+                    <div>
+                      <strong>{entry.organization}</strong>
+                      <p>{entry.description}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="career-history__group">
+              <h4>所属企業</h4>
+              <ul>
+                {resume.employmentHistory.map((entry) => (
+                  <li key={entry.organization}>
+                    <time>{entry.period}</time>
+                    <div>
+                      <strong>{entry.organization}</strong>
+                      <p>{entry.description}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+        <h3 className="project-history-title">プロジェクト経歴</h3>
         <div className="timeline">
           {resume.experiences.map((experience) => (
             <article className="experience-card" key={experience.no}>
