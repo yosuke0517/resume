@@ -33,7 +33,7 @@ export type CareerEntry = {
 };
 
 export const resume = {
-  updatedAt: "2026-07",
+  updatedAt: "2026-10",
   person: {
     nameJa: "竹内 陽祐",
     nameEn: "Takeuchi Yosuke",
@@ -249,5 +249,15 @@ export const resume = {
       technologies: ["Nuxt.js", "Vue.js", "TypeScript", "Node.js", "WebSocket", "MongoDB", "Java", "C#", "MySQL", "PostgreSQL", "Redis"]
     }
   ] satisfies Experience[],
-  personalProjects: "現在、サービスとして稼働中のプロダクトはありませんが、新しい技術のキャッチアップやスキル向上のため、継続的に個人開発を行っています。"
+  personalProjects: {
+    title: "Skill Compass — エンジニア向け学習アプリ",
+    url: "https://github.com/yosuke0517/skill-compass",
+    summary: "実務ケースを使った学習と日々の回答・成長記録を扱う個人開発。Web画面、API、DB、外部サービス連携、デプロイ手順と品質検証を設計・実装。",
+    achievements: [
+      "Next.js / TypeScriptをOpenNext経由でCloudflare Workersへ配置する構成を整備。Drizzle ORM + D1で学習データを管理し、Podcast音声の保存にはR2を利用。",
+      "WebとMCPから学習機能を利用できるようにし、OAuth認可コードフロー（PKCE S256）とBearer認証を実装。認証したユーザーに紐づけて学習記録を扱い、MCPに公開する操作を限定。",
+      "Xの技術ニュース取得、GeminiによるPodcast台本・音声生成を統合。生成処理の状態と音声チャンクを管理し、外部APIや音声保存の処理を分離。",
+      "Vitestで認証・他ユーザーの回答へのアクセス拒否・Workersの実行環境制約を検証するテストを整備。PlaywrightのE2Eと、stagingで検証したコミットを指定して本番へ反映するGitHub Actionsの手順を用意。"
+    ]
+  }
 };
