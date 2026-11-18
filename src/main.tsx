@@ -53,7 +53,7 @@ const App = () => {
       <section className="summary-band" aria-labelledby="summary-title">
         <div>
           <Sparkles aria-hidden="true" />
-          <h2 id="summary-title">LLMによる要点整理</h2>
+          <h2 id="summary-title">専門性と開発への取り組み</h2>
         </div>
         <ul>
           {resume.highlights.map((highlight) => (

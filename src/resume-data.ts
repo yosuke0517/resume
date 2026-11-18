@@ -33,7 +33,7 @@ export type CareerEntry = {
 };
 
 export const resume = {
-  updatedAt: "2026-10",
+  updatedAt: "2026-11",
   person: {
     nameJa: "竹内 陽祐",
     nameEn: "Takeuchi Yosuke",
@@ -42,12 +42,10 @@ export const resume = {
     title: "TypeScript / React / Next.js を軸に、FE/BE一貫開発と開発体験改善を進めるWebエンジニア"
   },
   highlights: [
-    "直近案件ではFEリードとして、作業者に依存しないコード品質を担保するための規約・自動化整備と、テスティングトロフィーを意識したカバレッジ拡充を推進。",
-    "直近はモノレポ構成でFE/BE一貫開発。DB設計、バックエンド開発、フロントエンド実装まで担当。",
-    "TypeScript、React / Next.js、Vue / Nuxt.js を用いたSPA・業務Webアプリ開発が主領域。",
-    "UI/UX仮説、プロトタイプ、ABテストを通じた改善と、パフォーマンス課題の解決を得意とする。",
-    "Biome、ESLint、cspell、Git Hooks、LLM向けルール整備により、品質と開発速度を両立。",
-    "Clean Architecture / DDD-lite を現場規模に合わせて調整し、変更に強い設計へ落とし込む。"
+    "フロントエンドの専門性：Next.js・React・TypeScriptを軸に、App RouterやServer Components、認証、共通UIなどの設計・実装から開発基盤の整備まで担当。",
+    "設計と技術選定：Clean ArchitectureやDDDの考え方を踏まえつつ、保守性・納期・チームの習熟度を考慮。必要以上に複雑にせず、プロダクトに合った構成を選択。",
+    "AIを活用した開発：CodexやClaude Codeの利用に合わせ、実装規約・参照ルール・Hooks・自動テスト・AIレビューを組み合わせ、生成結果を検証できる開発環境を整備。",
+    "継続的な学習：技術動向に加え、CS・データベース・システム設計を日々学習。技術の採用条件やトレードオフを整理し、意思決定の質を高めることを意識。"
   ],
   strengths: [
     {

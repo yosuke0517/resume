@@ -1,10 +1,20 @@
-import { screen } from "@testing-library/react";
+import { screen, within } from "@testing-library/react";
 import { beforeAll, describe, expect, it } from "vitest";
 
 describe("resume achievements", () => {
   beforeAll(async () => {
     document.body.innerHTML = '<div id="root"></div>';
     await import("./main");
+  });
+
+  it("renders the four expertise and development themes", async () => {
+    const section = await screen.findByRole("region", { name: "専門性と開発への取り組み" });
+    expect(within(section).getAllByRole("listitem")).toHaveLength(4);
+    expect(within(section).getByText(/フロントエンドの専門性：Next.js/)).toBeInTheDocument();
+    expect(within(section).getByText(/設計と技術選定：Clean ArchitectureやDDD/)).toBeInTheDocument();
+    expect(within(section).getByText(/AIを活用した開発：CodexやClaude Code/)).toBeInTheDocument();
+    expect(within(section).getByText(/継続的な学習：技術動向に加え、CS・データベース・システム設計/)).toBeInTheDocument();
+    expect(screen.queryByRole("heading", { name: "LLMによる要点整理" })).not.toBeInTheDocument();
   });
 
   it("renders the featured project's evidence as collapsed disclosures", async () => {
