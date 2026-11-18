@@ -198,7 +198,13 @@ const App = () => {
           <p>Personal work</p>
           <h2 id="projects-title">個人開発</h2>
         </div>
-        <p>{resume.personalProjects}</p>
+        <h3><a href={resume.personalProjects.url}>{resume.personalProjects.title}</a></h3>
+        <p>{resume.personalProjects.summary}</p>
+        <ul className="achievement-list">
+          {resume.personalProjects.achievements.map((achievement) => (
+            <li key={achievement}>{achievement}</li>
+          ))}
+        </ul>
         <a className="download-link" href="/resume/resume.pdf">
           <Download size={16} aria-hidden="true" />
           PDFを開く
