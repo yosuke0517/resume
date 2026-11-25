@@ -19,7 +19,7 @@ describe("resume data helpers", () => {
     const featured = getFeaturedExperience(resume.experiences);
 
     expect(featured.title).toBe("HR管理Webアプリ開発支援");
-    expect(featured.period).toBe("2026/1〜");
+    expect(featured.period).toBe("2026/01〜");
   });
 
   it("explains why DDD-lite was selected", () => {
@@ -34,7 +34,7 @@ describe("resume data helpers", () => {
   it("provides expandable evidence for the featured project's achievements", () => {
     const featuredProject = resume.experiences.find((experience) => experience.no === "14");
 
-    expect(featuredProject?.achievements).toHaveLength(4);
+    expect(featuredProject?.achievements).toHaveLength(5);
     expect(featuredProject?.achievements).toEqual(
       expect.arrayContaining([
         expect.objectContaining({
@@ -48,7 +48,7 @@ describe("resume data helpers", () => {
           summary: expect.stringContaining("コード品質"),
           details: expect.arrayContaining([
             expect.stringContaining("Claude CodeとCodex"),
-            expect.stringContaining("継続改善フロー")
+            expect.stringContaining("自己改善ループ")
           ])
         }),
         expect.objectContaining({
@@ -56,6 +56,12 @@ describe("resume data helpers", () => {
           details: expect.arrayContaining([
             expect.stringContaining("Storybookのストーリー"),
             expect.stringContaining("カバレッジ")
+          ])
+        }),
+        expect.objectContaining({
+          summary: expect.stringContaining("TanStack Query"),
+          details: expect.arrayContaining([
+            expect.stringContaining("無効化漏れ")
           ])
         }),
         expect.objectContaining({
@@ -73,7 +79,7 @@ describe("resume data helpers", () => {
       {
         period: "2012/04〜2017/03",
         organization: "サイバー大学 IT総合学部",
-        description: "卒業"
+        description: expect.stringContaining("在職しながら通信制")
       }
     ]);
     expect(resume.employmentHistory).toEqual([
@@ -91,6 +97,14 @@ describe("resume data helpers", () => {
         period: "2019/01〜2021/03",
         organization: "株式会社ROSSO",
         description: expect.stringContaining("電通デジタル社内")
+      }),
+      expect.objectContaining({
+        period: "2021/04〜2021/12",
+        organization: "フリーランス"
+      }),
+      expect.objectContaining({
+        period: "2022/01〜現在",
+        organization: "法人設立（1人法人・代表）"
       })
     ]);
   });

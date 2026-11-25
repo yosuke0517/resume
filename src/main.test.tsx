@@ -17,13 +17,12 @@ describe("resume achievements", () => {
     expect(screen.queryByRole("heading", { name: "LLMによる要点整理" })).not.toBeInTheDocument();
   });
 
-  it("renders the featured project's evidence as collapsed disclosures", async () => {
-    const summaries = await screen.findAllByText(/設計・整備|体系化|カバレッジ改善|責務境界/);
+  it("renders the featured project's evidence as expanded disclosures", async () => {
+    await screen.findByText(/モノレポ（4アプリ・9パッケージ）を立ち上げ/);
     const disclosures = document.querySelectorAll("details.achievement-details");
 
-    expect(summaries).toHaveLength(4);
-    expect(disclosures).toHaveLength(4);
-    expect([...disclosures].every((details) => !details.hasAttribute("open"))).toBe(true);
+    expect(disclosures).toHaveLength(5);
+    expect([...disclosures].every((details) => details.hasAttribute("open"))).toBe(true);
   });
 
   it("renders education and employment history before the project timeline", async () => {
@@ -35,6 +34,8 @@ describe("resume achievements", () => {
     expect(screen.getByText("株式会社日本オーエー研究所")).toBeInTheDocument();
     expect(screen.getByText("株式会社ROSSO")).toBeInTheDocument();
     expect(screen.getByText(/東京メトロ管制管理システム/)).toBeInTheDocument();
+    expect(screen.getByText("フリーランス")).toBeInTheDocument();
+    expect(screen.getByText("法人設立（1人法人・代表）")).toBeInTheDocument();
     expect(backgroundHeading.compareDocumentPosition(firstProject) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
   });
 });
