@@ -167,7 +167,7 @@ const App = () => {
 
                     return (
                       <li key={achievement.summary}>
-                        <details className="achievement-details">
+                        <details className="achievement-details" open={experience.featured}>
                           <summary>
                             <span>{achievement.summary}</span>
                             <ChevronDown size={18} aria-hidden="true" />
