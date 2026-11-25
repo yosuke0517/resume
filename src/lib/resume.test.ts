@@ -34,7 +34,7 @@ describe("resume data helpers", () => {
   it("provides expandable evidence for the featured project's achievements", () => {
     const featuredProject = resume.experiences.find((experience) => experience.no === "14");
 
-    expect(featuredProject?.achievements).toHaveLength(5);
+    expect(featuredProject?.achievements).toHaveLength(6);
     expect(featuredProject?.achievements).toEqual(
       expect.arrayContaining([
         expect.objectContaining({
@@ -62,6 +62,14 @@ describe("resume data helpers", () => {
           summary: expect.stringContaining("TanStack Query"),
           details: expect.arrayContaining([
             expect.stringContaining("無効化漏れ")
+          ])
+        }),
+        expect.objectContaining({
+          summary: expect.stringContaining("デザインシステム"),
+          details: expect.arrayContaining([
+            expect.stringContaining("デザイントークン"),
+            expect.stringContaining("コンポーネント・props"),
+            expect.stringContaining("段階的に適用")
           ])
         }),
         expect.objectContaining({
