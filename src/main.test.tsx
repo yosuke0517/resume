@@ -21,8 +21,9 @@ describe("resume achievements", () => {
     await screen.findByText(/モノレポ（4アプリ・9パッケージ）を立ち上げ/);
     const disclosures = document.querySelectorAll("details.achievement-details");
 
-    expect(disclosures).toHaveLength(5);
+    expect(disclosures).toHaveLength(6);
     expect([...disclosures].every((details) => details.hasAttribute("open"))).toBe(true);
+    expect(screen.getByText(/デザインシステムを段階的に推進/)).toBeInTheDocument();
   });
 
   it("renders education and employment history before the project timeline", async () => {
