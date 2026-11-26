@@ -1,4 +1,4 @@
-import { screen, within } from "@testing-library/react";
+import { fireEvent, screen, within } from "@testing-library/react";
 import { beforeAll, describe, expect, it } from "vitest";
 
 describe("resume achievements", () => {
@@ -17,12 +17,18 @@ describe("resume achievements", () => {
     expect(screen.queryByRole("heading", { name: "LLMによる要点整理" })).not.toBeInTheDocument();
   });
 
-  it("renders the featured project's evidence as expanded disclosures", async () => {
+  it("renders the featured project's evidence as collapsed disclosures with text toggles", async () => {
     await screen.findByText(/モノレポ（4アプリ・9パッケージ）を立ち上げ/);
     const disclosures = document.querySelectorAll("details.achievement-details");
 
     expect(disclosures).toHaveLength(6);
-    expect([...disclosures].every((details) => details.hasAttribute("open"))).toBe(true);
+    expect([...disclosures].every((details) => !details.hasAttribute("open"))).toBe(true);
+    expect(screen.getAllByText("詳細")).toHaveLength(6);
+    const summary = disclosures[0].querySelector("summary")!;
+    fireEvent.click(summary);
+    expect(disclosures[0]).toHaveAttribute("open");
+    fireEvent.click(summary);
+    expect(disclosures[0]).not.toHaveAttribute("open");
     expect(screen.getByText(/デザインシステムを段階的に推進/)).toBeInTheDocument();
   });
 

@@ -167,10 +167,10 @@ const App = () => {
 
                     return (
                       <li key={achievement.summary}>
-                        <details className="achievement-details" open={experience.featured}>
+                        <details className="achievement-details">
                           <summary>
                             <span>{achievement.summary}</span>
-                            <ChevronDown size={18} aria-hidden="true" />
+                            <span className="achievement-details__toggle">詳細<ChevronDown size={12} aria-hidden="true" /></span>
                           </summary>
                           <ul className="achievement-details__list">
                             {achievement.details.map((detail) => (
